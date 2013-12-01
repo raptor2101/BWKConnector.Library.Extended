@@ -1,13 +1,13 @@
 package de.raptor2101.BattleWorldsKronos.Connector.Gui.Activities;
 
+import de.raptor2101.BattleWorldsKronos.Connector.Gui.R;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import de.raptor2101.BattleWorldsKronos.Connector.Gui.R;
 
-public abstract class ActionBarGameListingActivity extends AbstractGameListingActivity {
-  
+public class ActionBarMessageListingActivity extends AbstractMessageListingActivity{
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -23,4 +23,5 @@ public abstract class ActionBarGameListingActivity extends AbstractGameListingAc
   protected ProgressBar GetProgressBar() {
     return (ProgressBar) findViewById(R.id.action_bar_progress_bar);
   }
+
 }
