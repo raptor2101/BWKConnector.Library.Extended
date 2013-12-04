@@ -21,7 +21,7 @@ public class GameListingActivity extends AbstractGameListingActivity {
   }
   
   @Override
-  protected ProgressBar GetProgressBar() {
+  protected ProgressBar getProgressBar() {
     return (ProgressBar) findViewById(R.id.action_bar_progress_bar);
   }
   
