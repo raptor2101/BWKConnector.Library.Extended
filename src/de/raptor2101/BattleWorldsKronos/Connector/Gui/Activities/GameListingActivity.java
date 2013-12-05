@@ -3,6 +3,7 @@ package de.raptor2101.BattleWorldsKronos.Connector.Gui.Activities;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import de.raptor2101.BattleWorldsKronos.Connector.Gui.R;
@@ -14,7 +15,7 @@ public class GameListingActivity extends AbstractGameListingActivity {
     super.onCreate(savedInstanceState);
     ActionBar actionBar = getActionBar();
     actionBar.setCustomView(R.layout.action_bar_layout);
-    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_SHOW_TITLE|ActionBar.DISPLAY_SHOW_CUSTOM);
+    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     
     TextView textView = (TextView) findViewById(R.id.action_bar_title);
     textView.setText(R.string.title_activity_games);
@@ -29,5 +30,10 @@ public class GameListingActivity extends AbstractGameListingActivity {
   public boolean onCreateOptionsMenu(Menu menu){
     getMenuInflater().inflate(R.menu.action_bar_menu, menu);
     return true;
+  }
+
+  @Override
+  protected View getTitleImageButton() {
+    return findViewById(R.id.advanced_title_bar_button);
   }
 }

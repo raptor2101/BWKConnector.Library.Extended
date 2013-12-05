@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ public class MessageListingActivity extends AbstractMessageListingActivity{
     super.onCreate(savedInstanceState);
     ActionBar actionBar = getActionBar();
     actionBar.setCustomView(R.layout.action_bar_layout);
-    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_SHOW_TITLE|ActionBar.DISPLAY_SHOW_CUSTOM);
+    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     
     TextView textView = (TextView) findViewById(R.id.action_bar_title);
     textView.setText(getTitle());
@@ -38,5 +39,10 @@ public class MessageListingActivity extends AbstractMessageListingActivity{
     Intent intent = new Intent(this, WriteMessageActivity.class);
     intent.putExtra(WriteMessageActivity.INTENT_EXTRA_MESSAGE_RESPOND_TO, message);
     startActivity(intent);
+  }
+  
+  @Override
+  protected View getTitleImageButton() {
+    return findViewById(R.id.advanced_title_bar_button);
   }
 }
