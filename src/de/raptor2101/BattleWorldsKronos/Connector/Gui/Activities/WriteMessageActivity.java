@@ -14,7 +14,7 @@ public class WriteMessageActivity extends AbstractWriteMessageActivity {
     
     ActionBar actionBar = getActionBar();
     actionBar.setCustomView(R.layout.action_bar_layout);
-    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_SHOW_TITLE|ActionBar.DISPLAY_SHOW_CUSTOM);
+    actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     
     TextView textView = (TextView) findViewById(R.id.action_bar_title);
     textView.setText(getTitle());
